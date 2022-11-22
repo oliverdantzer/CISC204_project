@@ -1,25 +1,28 @@
-e_nsi = ith card in hand is of value n and suit s
-p_ns = piled card is value n and suit s
-h_ni = e_nsi card is highest card in deck
-w = when user sum less than eq to 7
-m_qn = e_nsi has q duplicate cards with same value n
-s_mqn = p_ns has q duplicates in hand
-f_cs = e_nsi has c consecutive cards with same s
-sf_cs = p_ns has c consecutive cards with same s in hand
-smh_qn = no s_mqn higher in q
-sfh_cs = sf_cs is true && no other sf_cs is higher in c
-mh_qn = m_qn is true && no other m_qn is higher in q value
-c = true when possible conflict between two possible moves, one removing a potential group for next round
-gs_r = the sum of the group that contains pot card (s group) is greater than the sum group in hand.
-hs_r = evaluating the a highest group within hand + pile
-hR_r = highest group in only h group.
-pd_h = placing group with highest sum into pot
-us = option 1
-ud = option 2
+__Propositions__
+e_ns = true if a card in hand has value n and suit s
+p_ns = true if piled card is value n and suit s
+w = true if the sum of n's for all e_ns <= 7.
+m_nq = e_ns has q cards with same value n in hand
+sm_nq = p_ns has q cards with same value n that are in hand
+f_sc = e_ns has c consecutive cards with same s in hand
+sf_sc = p_ns has c consecutive cards with same s in hand
+g_ad = true if a group in hand has length a and sum of n equal to d. e.g 2 hearts, 3 hearts, 4 hearts is a group with length 3 and sum of n equal to 9.
+a_g = true if g_ad is the highest group in terms of a in the hand.
+d_g = true if g_ad (or just g denoting this specific group) is the highest group in terms of d in the hand.
+sg_ad = true if a group in hand+pile has length a and sum of n equal to d. 
+sa_g = true if sg_ad (g denoting this specific group) is the highest group in terms of length a in hand+pile.
+sd_g = true if sg_ad is the highest group in terms of sum d in hand+pile.
+c = true when an a_g and a sa_g have at least one e_ns in common.
+nc = true when a g_ad and a sa_g have no e_ns in common.
+va = true when sa_g has higher length a than a_g.
+vd = true when sd_g has higher sum d than d_g.
+rx = best g_ad in hand is put down on top of pile.
+ry = second best g_ad in hand is put down on top of pile.
+us = true if pile card is picked up
+ud = true if random card from deck is picked up
 l = pile card less than 7
 
 __Constraints__ 
-
 smh_qn \to sm_qn
 mh_qn \to m_qn
 
