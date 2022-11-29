@@ -1,12 +1,13 @@
+
 __Propositions__
 e_ns = true if a card in hand has value n and suit s
 k_i = true if hand has an i number of cards.
 p_ns = true if piled card is value n and suit s
 w = true if the sum of n's for all e_ns <= 7.
-m_nq = e_ns has q cards with same value n in hand
-sm_nq = p_ns has q cards with same value n that are in hand
-f_sc = e_ns has c consecutive cards with same s in hand
-sf_sc = p_ns has c consecutive cards with same s in hand
+m_nq = e_ns has q cards with same value n in hand (group type 1 a)
+sm_nq = p_ns has q cards with same value n that are in hand (group type 1 b)
+f_sc = e_ns has c consecutive cards with same s in hand (group type 2 a)
+sf_sc = p_ns has c consecutive cards with same s in hand (group type 2 b)
 g_d = true if a group in hand has sum of n equal to d. e.g 2 hearts, 3 hearts, 4 hearts is a group with sum of n equal to 9.
 d_g = true if g_d (or just g denoting this specific group) is the highest group in terms of d in the hand.
 sg_d = true if a group in hand+pile has sum of n equal to d. 
@@ -16,8 +17,8 @@ c = true when an d_g and a sd_g have at least one e_ns in common.
 vd = true when sd_g has higher sum d than d_g.
 rx = d_g is put down on top of pile.
 ry = best under d_g in hand is put down on top of pile.
-us = true if pile card is picked up
-ud = true if random card from deck is picked up
+us = true if pile card is picked up (option 1)
+ud = true if random card from deck is picked up (option 2)
 l = p_ns less than 7
 
 __Constraints__ 
@@ -30,8 +31,8 @@ every card has a unique suit and value combination assigned to it: e.g there can
 Rules of the game:
 1<=q<=3, so the number of cards with the same n as a given e_ns or p_ns is limited to 1, 2 or 3 others.
 2<=c<=4, so the number of cards consecutive to a given e_ns or p_ns with the same s is limited to 2, 3, or 4 others.
-g_d <-> m_nq \/ f_sc \/ e_ns (these three things are just groups, categorized because they have different constraints placed on them, similar to one below)
-sg_d <-> sm_nq \/ sf_sc 
+g_d <-> (m_nq \/ f_sc \/ e_ns) /\ !(m_nq /\ f_sc /\ e_ns) /\ !(m_nq /\ f_sc) /\ !(f_sc /\ e_ns)  /\ !(m_nq /\ e_ns) (these three things are just groups, categorized because they have different constraints placed on them, similar to one below)
+sg_d <-> (sm_nq \/ sf_sc) /\ !(sm_nq /\ sf_sc)
 d_g -> g_d (in order for g_d to be the highest, g_d needs to exist, similar to one below)
 sd_g -> sg_d
 w <-> e_71 \/ e_72 \/...\/ e_74 \/ (e_51 /\ e_11) \/ ... or any combination of cards in hand that adds up to a sum of n <=7.
