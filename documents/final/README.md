@@ -10,4 +10,6 @@ This folder should contain the extra documents for the deliverables (D3) - (D5)
 
 ## Whats Here
 there are html files for the two python files used in the model.
-to play the game, enter the terminal from the directory (`v4`)
+to play the game, enter the terminal from the directory `v4` and if on
+a linux system type in the terminal: `python3 ./main.py` doing so will reveal the GUI
+to play with the model.
