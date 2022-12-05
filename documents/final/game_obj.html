@@ -1,0 +1,177 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module game_obj</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>game_obj</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/home/aidan/school/204/project/v2/game_obj.py">/home/aidan/school/204/project/v2/game_obj.py</a></font></td></tr></table>
+    <p></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="pydoc.html">pydoc</a><br>
+</td><td width="25%" valign=top><a href="random.html">random</a><br>
+</td><td width="25%" valign=top></td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="builtins.html#object">builtins.object</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="game_obj.html#Card">Card</a>
+</font></dt><dt><font face="helvetica, arial"><a href="game_obj.html#Deck">Deck</a>
+</font></dt><dt><font face="helvetica, arial"><a href="game_obj.html#Game">Game</a>
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Card">class <strong>Card</strong></a>(<a href="builtins.html#object">builtins.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt><a href="#Card">Card</a>(suit,&nbsp;val,&nbsp;hidden=0)<br>
+&nbsp;<br>
+The&nbsp;card&nbsp;<a href="builtins.html#object">object</a>&nbsp;contains&nbsp;2&nbsp;arguments:<br>
+the&nbsp;suit,&nbsp;the&nbsp;value,&nbsp;and&nbsp;an&nbsp;integer&nbsp;value&nbsp;representing<br>
+the&nbsp;cards&nbsp;value&nbsp;from&nbsp;1&nbsp;to&nbsp;13&nbsp;is&nbsp;created&nbsp;from&nbsp;this&nbsp;infromation.<br>
+the&nbsp;card&nbsp;can&nbsp;ve&nbsp;hidden&nbsp;to&nbsp;inform&nbsp;the&nbsp;later&nbsp;methods&nbsp;that&nbsp;it&nbsp;is<br>
+not&nbsp;the&nbsp;current&nbsp;players&nbsp;turn.<br>
+In&nbsp;addition&nbsp;the&nbsp;file&nbsp;name&nbsp;containing&nbsp;a&nbsp;file&nbsp;name<br>
+associated&nbsp;with&nbsp;a&nbsp;png&nbsp;is&nbsp;used&nbsp;to&nbsp;eventually&nbsp;display&nbsp;the&nbsp;card<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="Card-__init__"><strong>__init__</strong></a>(self, suit, val, hidden=0)</dt><dd><tt>Initialize&nbsp;self.&nbsp;&nbsp;See&nbsp;help(type(self))&nbsp;for&nbsp;accurate&nbsp;signature.</tt></dd></dl>
+
+<dl><dt><a name="Card-fname"><strong>fname</strong></a>(self) -&gt; str</dt></dl>
+
+<dl><dt><a name="Card-hide"><strong>hide</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Card-reveal"><strong>reveal</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Card-suit"><strong>suit</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Card-val"><strong>val</strong></a>(self)</dt></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Deck">class <strong>Deck</strong></a>(<a href="builtins.html#object">builtins.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>the&nbsp;deck&nbsp;<a href="builtins.html#object">object</a>&nbsp;constructor&nbsp;takes&nbsp;no&nbsp;arguments,&nbsp;instead&nbsp;creating&nbsp;an<br>
+empty&nbsp;list&nbsp;to&nbsp;hold&nbsp;the&nbsp;card&nbsp;objects.<br>
+and&nbsp;creating&nbsp;a&nbsp;2D&nbsp;list&nbsp;to&nbsp;hold&nbsp;the&nbsp;groups&nbsp;of&nbsp;type&nbsp;one&nbsp;and&nbsp;two.<br>
+there&nbsp;are&nbsp;other&nbsp;methods&nbsp;implemented&nbsp;within&nbsp;this&nbsp;class&nbsp;that&nbsp;apply<br>
+the&nbsp;functonality&nbsp;of&nbsp;this&nbsp;class.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="Deck-__init__"><strong>__init__</strong></a>(self)</dt><dd><tt>Initialize&nbsp;self.&nbsp;&nbsp;See&nbsp;help(type(self))&nbsp;for&nbsp;accurate&nbsp;signature.</tt></dd></dl>
+
+<dl><dt><a name="Deck-add_card"><strong>add_card</strong></a>(self, suit, val)</dt><dd><tt>this&nbsp;method&nbsp;adds&nbsp;a&nbsp;card&nbsp;with&nbsp;suit&nbsp;and&nbsp;val<br>
+to&nbsp;the&nbsp;deck.</tt></dd></dl>
+
+<dl><dt><a name="Deck-create_deck"><strong>create_deck</strong></a>(self)</dt><dd><tt>this&nbsp;method&nbsp;creates&nbsp;a&nbsp;standard&nbsp;52&nbsp;card&nbsp;deck&nbsp;and&nbsp;is&nbsp;only&nbsp;to&nbsp;be&nbsp;ran&nbsp;once&nbsp;per&nbsp;game.<br>
+it&nbsp;appends&nbsp;these&nbsp;cards&nbsp;to&nbsp;the&nbsp;list&nbsp;self.<strong>cards</strong>&nbsp;.</tt></dd></dl>
+
+<dl><dt><a name="Deck-exists_already"><strong>exists_already</strong></a>(self, c)</dt><dd><tt>returns&nbsp;a&nbsp;boolean&nbsp;regarding&nbsp;the&nbsp;existence&nbsp;of<br>
+a&nbsp;card&nbsp;c&nbsp;within&nbsp;the&nbsp;deck.&nbsp;verifying&nbsp;correct<br>
+memory&nbsp;adress.</tt></dd></dl>
+
+<dl><dt><a name="Deck-getSize"><strong>getSize</strong></a>(self)</dt><dd><tt>returns&nbsp;the&nbsp;length&nbsp;of&nbsp;the&nbsp;list<br>
+containg&nbsp;the&nbsp;cards&nbsp;in&nbsp;the&nbsp;deck.</tt></dd></dl>
+
+<dl><dt><a name="Deck-getSum"><strong>getSum</strong></a>(self)</dt><dd><tt>this&nbsp;function&nbsp;returns&nbsp;the&nbsp;sum&nbsp;of&nbsp;cards&nbsp;in&nbsp;the&nbsp;current&nbsp;deck.</tt></dd></dl>
+
+<dl><dt><a name="Deck-get_card"><strong>get_card</strong></a>(self, suit, val)</dt><dd><tt>this&nbsp;method&nbsp;returns&nbsp;the&nbsp;card&nbsp;with&nbsp;<br>
+suit&nbsp;and&nbsp;val.&nbsp;(useful&nbsp;when&nbsp;specific&nbsp;memory&nbsp;<br>
+address&nbsp;requiresd)</tt></dd></dl>
+
+<dl><dt><a name="Deck-get_groups"><strong>get_groups</strong></a>(self)</dt><dd><tt>this&nbsp;method&nbsp;returns&nbsp;the&nbsp;groups&nbsp;of&nbsp;the&nbsp;deck.<br>
+it&nbsp;checks&nbsp;for&nbsp;both&nbsp;type&nbsp;1&nbsp;and&nbsp;2&nbsp;groups.<br>
+placing&nbsp;each&nbsp;set&nbsp;of&nbsp;groups&nbsp;within&nbsp;the&nbsp;list&nbsp;to&nbsp;be&nbsp;returned.</tt></dd></dl>
+
+<dl><dt><a name="Deck-get_index"><strong>get_index</strong></a>(self, suit, val) -&gt; int</dt><dd><tt>this&nbsp;method&nbsp;returns&nbsp;the&nbsp;index&nbsp;of&nbsp;a&nbsp;card&nbsp;with&nbsp;<br>
+suit&nbsp;and&nbsp;val.</tt></dd></dl>
+
+<dl><dt><a name="Deck-remove_card"><strong>remove_card</strong></a>(self, suit, val)</dt><dd><tt>this&nbsp;method&nbsp;removes&nbsp;a&nbsp;card&nbsp;of&nbsp;suit&nbsp;and&nbsp;val<br>
+from&nbsp;the&nbsp;deck</tt></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Game">class <strong>Game</strong></a>(<a href="builtins.html#object">builtins.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt><a href="#Game">Game</a>(num_player=2,&nbsp;deck=&amp;lt;game_obj.<a href="#Deck">Deck</a>&nbsp;<a href="builtins.html#object">object</a>&nbsp;at&nbsp;0x7f7446016740&amp;gt;,&nbsp;pot=&amp;lt;game_obj.<a href="#Deck">Deck</a>&nbsp;<a href="builtins.html#object">object</a>&nbsp;at&nbsp;0x7f74460167a0&amp;gt;)<br>
+&nbsp;<br>
+this&nbsp;class&nbsp;is&nbsp;used&nbsp;to&nbsp;hold&nbsp;varous&nbsp;objects&nbsp;that&nbsp;are&nbsp;used&nbsp;in&nbsp;the&nbsp;game,<br>
+in&nbsp;particular&nbsp;creating&nbsp;various&nbsp;instances&nbsp;go&nbsp;deck&nbsp;objects&nbsp;to&nbsp;represent&nbsp;the&nbsp;<br>
+main&nbsp;deck,&nbsp;the&nbsp;player&nbsp;decks&nbsp;and&nbsp;the&nbsp;pile&nbsp;deck.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="Game-__init__"><strong>__init__</strong></a>(self, num_player=2, deck=&lt;game_obj.Deck object at 0x7f7446016740&gt;, pot=&lt;game_obj.Deck object at 0x7f74460167a0&gt;)</dt><dd><tt>the&nbsp;constructor&nbsp;creates&nbsp;the&nbsp;player&nbsp;decks&nbsp;list,&nbsp;pot&nbsp;deck&nbsp;and&nbsp;main&nbsp;deck&nbsp;objects.<br>
+it&nbsp;also&nbsp;creates&nbsp;an&nbsp;integer&nbsp;to&nbsp;track&nbsp;the&nbsp;roundcount.</tt></dd></dl>
+
+<dl><dt><a name="Game-addtoPot"><strong>addtoPot</strong></a>(self, player, suit, val)</dt><dd><tt>this&nbsp;method&nbsp;adds&nbsp;a&nbsp;new&nbsp;card&nbsp;<a href="builtins.html#object">object</a>&nbsp;with&nbsp;specific&nbsp;suit&nbsp;and&nbsp;value<br>
+to&nbsp;the&nbsp;pot&nbsp;deck</tt></dd></dl>
+
+<dl><dt><a name="Game-addtoplayerDeck"><strong>addtoplayerDeck</strong></a>(self, player)</dt><dd><tt>given&nbsp;a&nbsp;player&nbsp;number&nbsp;(0&nbsp;or&nbsp;1):&nbsp;the<br>
+last&nbsp;card&nbsp;placed&nbsp;in&nbsp;the&nbsp;pot&nbsp;deck&nbsp;is&nbsp;placed&nbsp;into<br>
+that&nbsp;players&nbsp;deck</tt></dd></dl>
+
+<dl><dt><a name="Game-create_player_decks"><strong>create_player_decks</strong></a>(self)</dt><dd><tt>this&nbsp;method&nbsp;creates&nbsp;the&nbsp;player&nbsp;decks&nbsp;by&nbsp;removing&nbsp;10&nbsp;cards&nbsp;from&nbsp;the&nbsp;main&nbsp;deck<br>
+and&nbsp;allocating&nbsp;5&nbsp;per&nbsp;player.&nbsp;the&nbsp;cards&nbsp;are&nbsp;chosen&nbsp;at&nbsp;random&nbsp;to&nbsp;ensure<br>
+proper&nbsp;"shuffling"&nbsp;is&nbsp;applied.</tt></dd></dl>
+
+<dl><dt><a name="Game-init_pot"><strong>init_pot</strong></a>(self)</dt><dd><tt>this&nbsp;method&nbsp;initializes&nbsp;the&nbsp;pot&nbsp;deck&nbsp;by&nbsp;taking<br>
+one&nbsp;ramdom&nbsp;card&nbsp;from&nbsp;the&nbsp;deck&nbsp;and&nbsp;placing&nbsp;it&nbsp;in&nbsp;the<br>
+pot&nbsp;deck.</tt></dd></dl>
+
+<dl><dt><a name="Game-randomCardfromDeck"><strong>randomCardfromDeck</strong></a>(self, player)</dt><dd><tt>this&nbsp;method&nbsp;takes&nbsp;a&nbsp;player&nbsp;number&nbsp;and&nbsp;places&nbsp;a&nbsp;random&nbsp;card&nbsp;from<br>
+the&nbsp;main&nbsp;deck&nbsp;into&nbsp;that&nbsp;players&nbsp;deck.</tt></dd></dl>
+
+<dl><dt><a name="Game-removee_card"><strong>removee_card</strong></a>(self, usr, suit, val)</dt><dd><tt>this&nbsp;method&nbsp;removes&nbsp;a&nbsp;card&nbsp;with&nbsp;a&nbsp;suit&nbsp;and&nbsp;value<br>
+from&nbsp;a&nbsp;specific&nbsp;players&nbsp;deck</tt></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table></td></tr></table>
+</body></html>
