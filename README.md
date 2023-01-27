@@ -11,6 +11,10 @@ A single scenerio of a hand given the players perspective. This includes the 5 o
 A more in-depth description of rules, propositions, and constraints is in the file info.txt
 
 ## To run things
+### Prerequisites
+The following packages are required:
+- Bahaus
+- python-nnf
 
 ### Building
 
