@@ -17,8 +17,8 @@ A more in-depth description of rules, propositions, and constraints is in the fi
 ## To run things
 ### Prerequisites
 The following packages are required:
-- Bahaus
-- python-nnf
+- ```bauhaus```
+- ```python-nnf```
 
 ### Building
 
